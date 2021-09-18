@@ -1,0 +1,40 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-content {
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    margin: 0 0 53px 0;
+
+    @include lg-md {
+      margin: 0 0 42px 0;
+    }
+
+    @include md-sm {
+      margin-bottom: 30px;
+    }
+
+    @include sm {
+      padding: 0 110px;
+      margin: 0 4px 39px 0;
+      line-height: 38px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: $gap;
+
+    @include sm {
+      align-items: center;
+    }
+  }
+}
+

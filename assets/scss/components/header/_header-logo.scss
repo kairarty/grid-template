@@ -1,0 +1,41 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-logo {
+  letter-spacing: 0.22em;
+  font-size: 1.5rem;
+
+  &__link {
+    display: block;
+    padding: $gap $gap $gap 0;
+
+    @include md-sm {
+      margin-left: -1px;
+    }
+
+    @include sm {
+      margin-left: -1px;
+    }
+  }
+
+  &__accent {
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 1px;
+    padding: 12px 0 15px 4px;
+    border: 3px solid $color-highlight;
+
+    @include md-sm {
+      padding-top: 13px;
+      padding-left: 4px;
+      padding-bottom: 14px;
+    }
+
+    @include sm {
+      padding-top: 13px;
+      padding-left: 4px;
+      padding-bottom: 14px;
+    }
+
+  }
+}

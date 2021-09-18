@@ -1,0 +1,215 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.about {
+  background-color: #e5e5e5;
+  height: auto;
+  padding-bottom: 57px;
+
+  @include sm {
+    height: 1226px;
+  }
+
+  &__container {
+    margin-left: 310px;
+    max-width: 936px + 50.5px + 42.5px + 271px;
+
+    @include lg-md {
+      margin-left: 20px;
+      max-width: 630px + 24.5px + 41.5px + 255px;
+    }
+
+    @include md-sm {
+      margin-left: 22px;
+      max-width: 414px + 18.5px + 55.5px + 236px;
+    }
+
+    @include sm {
+      margin-left: 23px;
+      max-width: 532px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    padding-top: 100px;
+    gap: 42.5px;
+
+    @include lg-md {
+      padding-top: 80px;
+      gap: 41.5px;
+    }
+
+    @include md-sm {
+      padding-top: 60px;
+      gap: 55.5px;
+    }
+
+    @include sm {
+      padding-top: 59px;
+      flex-direction: column;
+      gap: 39px;
+    }
+  }
+
+  &__content-text {
+    display: flex;
+    gap: 50.5px;
+
+    @include lg-md {
+      gap: 24.5px;
+    }
+
+    @include md-sm {
+      gap: 18.5px;
+    }
+
+    @include sm {
+      position: relative;
+      right: 1px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 47px;
+
+    @include lg-md {
+      margin: 0 0 35px;
+    }
+
+    @include md-sm {
+      margin-bottom: 27px;
+    }
+
+    @include sm {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    line-height: 24px;
+    color: #637588;
+    margin: 0 0 16px;
+    position: relative;
+    top: 2px;
+
+    @include md-sm {
+      font-size: 16px;
+      letter-spacing: 0.8px;
+      top: 3px;
+    }
+
+    @include sm {
+      font-size: 16px;
+      letter-spacing: 0.8px;
+      top: 9px;
+    }
+  }
+
+  &__divider {
+    border: none;
+    border-left: 1px solid rgba(#707070, 0.27);
+    height: 200px;
+    width: 1px;
+
+    @include lg-md {
+      position: relative;
+      left: 1px;
+      bottom: 14px;
+    }
+
+    @include md-sm {
+      position: relative;
+      left: 1px;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__image {
+    margin-top: 1px;
+    width: 271px;
+    height: 487px;
+
+    @include lg-md {
+      width: 255px;
+      height: 459px;
+    }
+
+    @include md-sm {
+      position: relative;
+      top: -25px;
+      width: 236px;
+      height: 425px;
+    }
+
+    @include sm {
+      margin: 1px 0 0 142px;
+    }
+  }
+}
+
+.title-1,
+.title-2 {
+  text-align: left;
+  font-size: 40px;
+  color: #2d3651;
+  font-weight: 700;
+  margin: 0;
+
+  @include lg-md {
+    font-size: 32px;
+  }
+
+  @include md-sm {
+    font-size: 24px;
+  }
+
+  @include sm {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.title-1 {
+  letter-spacing: 3.5px;
+
+  @include lg-md {
+    margin-left: 1px;
+    letter-spacing: 2.6px;
+  }
+
+  @include md-sm {
+    letter-spacing: 2px;
+  }
+
+  @include sm {
+    letter-spacing: 2px;
+  }
+}
+
+.title-2 {
+  letter-spacing: 4.3px;
+
+  @include lg-md {
+    position: relative;
+    top: 2px;
+    letter-spacing: 3.4px;
+  }
+
+  @include md-sm {
+    position: relative;
+    top: 4px;
+    letter-spacing: 2.4px;
+  }
+
+  @include sm {
+    position: relative;
+    top: 4px;
+    letter-spacing: 2.4px;
+  }
+}

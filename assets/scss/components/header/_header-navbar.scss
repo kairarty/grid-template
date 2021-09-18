@@ -1,0 +1,138 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-navbar {
+  @include lg-md {
+    margin-bottom: 3px;
+    position: relative;
+    left: 5px;
+  }
+
+  @include md {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 22.5px;
+    position: relative;
+    margin: $gap 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
+    }
+
+    @include md-sm {
+      width: 24px;
+      height: 25px;
+      margin-right: 1px;
+    }
+
+    @include sm {
+      width: 24px;
+      height: 25px;
+      margin-right: 1px;
+    }
+
+    &-row {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 1px;
+        transform-origin: left center;
+      }
+
+      &:nth-child(2) {
+        top: 9px;
+        transform-origin: left center;
+      }
+
+      &:nth-child(3) {
+        top: 17px;
+        transform-origin: left center;
+      }
+    }
+
+    &--active span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: -3px;
+        left: 4px;
+      }
+
+      &:nth-child(2) {
+        width: 0;
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 18.5px;
+        left: 4px;
+      }
+    }
+  }
+
+  &__list {
+    @include md-min {
+      display: grid;
+      gap: $gap;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      justify-content: end;
+      @include unlist(0 -10px 0);
+    }
+
+    @include md {
+      display: none;
+      text-align: right;
+      @include unlist;
+      @include box-shadow;
+      background-color: rgba($color-gray-dark, 0.5);
+      position: absolute;
+      top: 100%;
+      right: $gap;
+    }
+  }
+
+  &__item {
+    @include md {
+      margin: $gap;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 1.125rem;
+    transition: color 0.25s;
+
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+
+    @include md {
+      padding: $gap-sm $gap
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+
+
+
+

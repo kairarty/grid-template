@@ -1,0 +1,130 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.skill-item {
+  position: relative;
+  overflow: hidden;
+
+  &:nth-of-type(1) {
+    @include lg-md {
+      margin-right: 4px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @include lg-md {
+      margin-left: -4px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    @include lg-md {
+      margin-right: -5px;
+    }
+  }
+
+  &:nth-of-type(4) {
+    @include lg-md {
+      margin-left: 5px;
+    }
+  }
+
+  &:nth-of-type(5) {
+    @include lg-md {
+      margin-right: 4px;
+    }
+  }
+
+  &:nth-of-type(6) {
+    @include lg-md {
+      margin-left: -4px;
+    }
+  }
+
+  &:nth-of-type(7) {
+    @include lg-md {
+      margin-right: -3px;
+    }
+  }
+
+  &:nth-of-type(8) {
+    @include lg-md {
+      margin-left: 5px;
+      margin-right: 4px;
+    }
+  }
+
+  &:nth-of-type(9) {
+    @include lg-md {
+      margin-left: 5px;
+    }
+  }
+
+  &:hover {
+    .skill-item__link {
+      color: $color-accent;
+    }
+
+    .skill-item__image {
+      transform: scale(1.1);
+    }
+
+    .skill-item__overlay {
+      opacity: 0.95;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    inset: 0;
+
+    @include md-min {
+      font-size: 1.25rem;
+    }
+
+    @include md {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__link {
+    height: 100%;
+    padding: $gap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.5s;
+  }
+
+  &__image {
+    background-color: $color-primary;
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: 0.5s transform;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: $color-primary;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+  }
+}
+
+@for $i from 1 through 9 {
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+
+    @include sm {
+      margin-left: 2px;
+    }
+  }
+}
+
+
+
