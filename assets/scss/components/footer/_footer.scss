@@ -31,7 +31,7 @@
   }
 
   &__divider {
-    margin: 29px 0;
+    margin: 29px auto 30px;
     width: 76px;
     height: 2px;
     border: none;
@@ -52,10 +52,34 @@
     letter-spacing: 4.8px;
     opacity: 0.3;
     margin-left: 4px;
+
+    @include lg-md {
+      margin-left: 5px;
+    }
+
+    @include md-sm {
+      margin-left: 6px;
+    }
   }
 
   &__text-2 {
     letter-spacing: 0.9px;
     font-weight: 500;
+
+    @include lg-md {
+      margin: 0 0 0 1px;
+    }
+
+    @include md-sm {
+      margin-left: 1px;
+    }
+  }
+}
+
+i {
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    position: relative;
+    left: 2px;
   }
 }

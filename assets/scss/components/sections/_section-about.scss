@@ -41,7 +41,7 @@
     }
 
     @include md-sm {
-      padding-top: 60px;
+      padding-top: 61px;
       gap: 55.5px;
     }
 
@@ -74,7 +74,7 @@
     margin: 0 0 47px;
 
     @include lg-md {
-      margin: 0 0 35px;
+      margin: 1px 0 38px;
     }
 
     @include md-sm {
@@ -98,13 +98,13 @@
     @include md-sm {
       font-size: 16px;
       letter-spacing: 0.8px;
-      top: 3px;
+      top: 4px;
     }
 
     @include sm {
       font-size: 16px;
       letter-spacing: 0.8px;
-      top: 9px;
+      top: 10px;
     }
   }
 
@@ -131,7 +131,7 @@
   }
 
   &__image {
-    margin-top: 1px;
+    margin-top: 2px;
     width: 271px;
     height: 487px;
 
@@ -142,7 +142,7 @@
 
     @include md-sm {
       position: relative;
-      top: -25px;
+      top: -27px;
       width: 236px;
       height: 425px;
     }
@@ -156,10 +156,11 @@
 .title-1,
 .title-2 {
   text-align: left;
-  font-size: 40px;
+  font-size: 42px;
   color: #2d3651;
   font-weight: 700;
   margin: 0;
+  font-family: "Roboto Slab", serif;
 
   @include lg-md {
     font-size: 32px;
@@ -176,7 +177,7 @@
 }
 
 .title-1 {
-  letter-spacing: 3.5px;
+  letter-spacing: 2.6px;
 
   @include lg-md {
     margin-left: 1px;
@@ -189,27 +190,28 @@
 
   @include sm {
     letter-spacing: 2px;
+    margin-top: 1px;
   }
 }
 
 .title-2 {
-  letter-spacing: 4.3px;
+  letter-spacing: 3.3px;
 
   @include lg-md {
     position: relative;
-    top: 2px;
+    top: 4px;
     letter-spacing: 3.4px;
   }
 
   @include md-sm {
     position: relative;
-    top: 4px;
+    top: 5px;
     letter-spacing: 2.4px;
   }
 
   @include sm {
     position: relative;
-    top: 4px;
+    top: 5px;
     letter-spacing: 2.4px;
   }
 }

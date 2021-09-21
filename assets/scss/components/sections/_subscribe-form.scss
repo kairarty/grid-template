@@ -38,6 +38,8 @@
   border: none;
   border-bottom: 1px solid #4C546B;
   letter-spacing: 2px;
+  padding-left: 30px;
+  color: white;
 
   &:hover {
     background-color: #4C546B;
@@ -53,6 +55,9 @@
     color: white;
     font-size: 18px;
 
+    position: relative;
+    right: 27px;
+
     @include lg-md {
       font-size: 16px;
       letter-spacing: 1.6px;
@@ -64,6 +69,7 @@
   }
 
   &:nth-child(1) {
+
     @include lg-md {
       max-width: 302px;
     }
@@ -196,11 +202,15 @@
     border: none;
     border-bottom: 1px solid #4C546B;
     letter-spacing: 2px;
+    color: white;
+    padding-left: 24px;
 
     &::placeholder {
       padding-left: 17px;
       color: white;
       font-size: 18px;
+      position: relative;
+      right: 22px;
     }
 
     :hover {

@@ -7,10 +7,24 @@
 
   &__container {
     @extend %container;
+
+    @include lg-md {
+      position: relative;
+      top: 2px;
+    }
+
+    @include md-sm {
+      margin-top: 120px;
+    }
   }
 
   &__title {
     margin: 0 0 53px 0;
+
+    @include lg-min {
+      letter-spacing: 4.6px;
+      margin-right: 3px;
+    }
 
     @include lg-md {
       margin: 0 0 42px 0;
@@ -20,11 +34,27 @@
       margin-bottom: 30px;
     }
 
-    @include sm {
-      padding: 0 110px;
-      margin: 0 4px 39px 0;
-      line-height: 38px;
+    @media (max-width: 575px) {
+      display: none;
     }
+  }
+
+  &__title-1,
+  &__title-2 {
+    margin: 0;
+    position: relative;
+    @media (min-width: 576px) {
+      display: none;
+    }
+  }
+
+  &__title-1 {
+    bottom: 20px;
+    right: 4px;
+  }
+
+  &__title-2 {
+    bottom: 17px;
   }
 
   &__actions {
@@ -34,6 +64,8 @@
 
     @include sm {
       align-items: center;
+      position: relative;
+      top: 22px;
     }
   }
 }
