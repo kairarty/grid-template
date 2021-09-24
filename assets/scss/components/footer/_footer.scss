@@ -15,6 +15,11 @@
   &__container {
     height: 250px;
     background-color: #2d3651;
+
+    @include lg-min {
+      padding-left: 18px;
+
+    }
   }
 
   &__icons-container {
@@ -31,11 +36,23 @@
   }
 
   &__divider {
-    margin: 29px auto 30px;
+    margin: 29px auto 29px;
     width: 76px;
     height: 2px;
     border: none;
     background-color: #424B63;
+
+    @include lg-md {
+      margin-bottom: 30px;
+    }
+
+    @include md-sm {
+      margin-bottom: 30px;
+    }
+
+    @include sm {
+      margin-bottom: 30px;
+    }
   }
 
   &__text-1,

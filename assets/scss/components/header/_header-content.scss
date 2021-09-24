@@ -22,8 +22,8 @@
     margin: 0 0 53px 0;
 
     @include lg-min {
-      letter-spacing: 4.6px;
-      margin-right: 3px;
+      letter-spacing: 4.5px;
+      margin-right: 4px;
     }
 
     @include lg-md {
@@ -61,6 +61,10 @@
     display: flex;
     justify-content: center;
     gap: $gap;
+
+    @include lg-min {
+      margin-left: 1px;
+    }
 
     @include sm {
       align-items: center;

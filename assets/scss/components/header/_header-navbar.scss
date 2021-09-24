@@ -111,6 +111,20 @@
     @include md {
       margin: $gap;
     }
+
+    &:nth-of-type(2) {
+      @include lg-min {
+        position: relative;
+        left: 1px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      @include lg-md {
+        position: relative;
+        right: 2px;
+      }
+    }
   }
 
   &__link {

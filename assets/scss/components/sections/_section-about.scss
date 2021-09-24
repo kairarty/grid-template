@@ -11,7 +11,7 @@
   }
 
   &__container {
-    margin-left: 310px;
+    margin: 0 auto;
     max-width: 936px + 50.5px + 42.5px + 271px;
 
     @include lg-md {
@@ -34,6 +34,11 @@
     display: flex;
     padding-top: 100px;
     gap: 42.5px;
+
+    @include lg-min {
+      position: relative;
+      left: 9px;
+    }
 
     @include lg-md {
       padding-top: 80px;
@@ -113,15 +118,18 @@
     border-left: 1px solid rgba(#707070, 0.27);
     height: 200px;
     width: 1px;
+    position: relative;
+
+    @include lg-min {
+      bottom: 6px;
+    }
 
     @include lg-md {
-      position: relative;
       left: 1px;
       bottom: 14px;
     }
 
     @include md-sm {
-      position: relative;
       left: 1px;
     }
 
@@ -138,6 +146,7 @@
     @include lg-md {
       width: 255px;
       height: 459px;
+      margin-top: 1px;
     }
 
     @include md-sm {
@@ -162,6 +171,11 @@
   margin: 0;
   font-family: "Roboto Slab", serif;
 
+  @include lg-min {
+    position: relative;
+    bottom: 1px;
+  }
+
   @include lg-md {
     font-size: 32px;
   }
@@ -179,9 +193,12 @@
 .title-1 {
   letter-spacing: 2.6px;
 
+  @include lg-min {
+    right: 1px;
+  }
+
   @include lg-md {
-    margin-left: 1px;
-    letter-spacing: 2.6px;
+    letter-spacing: 2.7px;
   }
 
   @include md-sm {
