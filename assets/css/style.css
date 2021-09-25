@@ -341,7 +341,7 @@ a {
 .about {
   background-color: #e5e5e5;
   height: auto;
-  padding-bottom: 57px;
+  padding-bottom: 63px;
 }
 .about__container {
   margin: 0 auto;
@@ -1057,6 +1057,12 @@ i:nth-of-type(4), i:nth-of-type(5) {
   }
 }
 
+@media (max-width: 991.8px) {
+  .hide-lg {
+    display: none;
+  }
+}
+
 @media (max-width: 991.8px) and (min-width: 768px) {
   .btn--light {
     width: 200px;
@@ -1175,6 +1181,9 @@ i:nth-of-type(4), i:nth-of-type(5) {
   .skill-item:nth-of-type(9) .skill-item__title {
     letter-spacing: 2px;
     margin-left: 2px;
+  }
+  .about {
+    padding-bottom: 23px;
   }
   .about__container {
     margin-left: 20px;
@@ -1412,6 +1421,12 @@ i:nth-of-type(4), i:nth-of-type(5) {
   .skill-item__title {
     font-size: 1.125rem;
   }
+  .about {
+    padding-bottom: 0;
+  }
+  .hide-md {
+    display: none;
+  }
   .footer {
     margin-top: 60px;
   }
@@ -1542,6 +1557,7 @@ i:nth-of-type(4), i:nth-of-type(5) {
   .about__content {
     padding-top: 61px;
     gap: 55.5px;
+    height: 479px;
   }
   .about__content-text {
     gap: 18.5px;
@@ -1830,7 +1846,7 @@ i:nth-of-type(4), i:nth-of-type(5) {
     height: 350px;
   }
   .about {
-    height: 1226px;
+    padding-bottom: 68px;
   }
   .about__container {
     margin-left: 23px;
@@ -1875,6 +1891,13 @@ i:nth-of-type(4), i:nth-of-type(5) {
     position: relative;
     top: 5px;
     letter-spacing: 2.4px;
+  }
+  .hide-md {
+    display: block;
+    margin-bottom: 6px;
+  }
+  .hide-sm {
+    display: none;
   }
   .subscribe-form {
     -webkit-box-orient: vertical;

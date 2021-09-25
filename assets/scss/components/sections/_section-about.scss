@@ -4,10 +4,18 @@
 .about {
   background-color: #e5e5e5;
   height: auto;
-  padding-bottom: 57px;
+  padding-bottom: 63px;
+
+  @include lg-md {
+    padding-bottom: 23px;
+  }
+
+  @include md {
+    padding-bottom: 0;
+  }
 
   @include sm {
-    height: 1226px;
+    padding-bottom: 68px;
   }
 
   &__container {
@@ -48,6 +56,7 @@
     @include md-sm {
       padding-top: 61px;
       gap: 55.5px;
+      height: 479px;
     }
 
     @include sm {
@@ -230,5 +239,28 @@
     position: relative;
     top: 5px;
     letter-spacing: 2.4px;
+  }
+}
+
+.hide-lg {
+  @include lg {
+    display: none;
+  }
+}
+
+.hide-md {
+  @include md {
+    display: none;
+  }
+
+  @include sm {
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+.hide-sm {
+  @include sm {
+    display: none;
   }
 }
