@@ -102,3 +102,15 @@
     }
   }
 }
+
+input:focus {
+  outline-width: 0;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.empty {
+  display: none;
+}

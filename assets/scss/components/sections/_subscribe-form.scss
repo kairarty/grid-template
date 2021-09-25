@@ -40,7 +40,7 @@
   height: 60px;
   background-color: #38405A;
   border: none;
-  border-bottom: 1px solid #4C546B;
+  border-bottom: 2px solid #4C546B;
   letter-spacing: 2px;
   padding-left: 31px;
   color: white;
@@ -54,6 +54,8 @@
     position: relative;
     right: 2px;
     bottom: 1px;
+    inset: 0;
+    padding-top: 0;
   }
 
   &::placeholder {
@@ -75,18 +77,27 @@
   &:nth-child(1) {
     @include lg-min {
       letter-spacing: 1.8px;
+
+      &:hover {
+        padding-left: 29px;
+      }
     }
 
     @include lg-md {
       position: relative;
       right: 2px;
       max-width: 302px;
+
+      &:hover {
+        padding-left: 27px;
+      }
     }
 
     @include md-sm {
       position: relative;
       bottom: 1px;
       width: 100%;
+      padding-left: 32px;
     }
 
     @include sm {
@@ -108,13 +119,13 @@
       @include md-sm {
         top: 1px;
         padding-left: 16px;
-        letter-spacing: 1.9px;
+        letter-spacing: 1.75px;
       }
 
       @include sm {
         padding-left: 16px;
         top: 1px;
-        letter-spacing: 1.7px;
+        letter-spacing: 1.8px;
       }
     }
   }
@@ -122,14 +133,13 @@
   &:nth-child(2) {
     @include lg-min {
       letter-spacing: 1.8px;
-    }
-
-    @include lg-min {
       position: relative;
       left: 1px;
     }
 
     @include lg-md {
+      position: relative;
+      left: 1px;
       max-width: 304px;
     }
 
@@ -152,8 +162,8 @@
       padding-left: 31px;
 
       @include lg-md {
-        padding-left: 21px;
-        top: -1px
+        padding-left: 20px;
+        top: -1px;
       }
 
       @include sm {
@@ -169,7 +179,7 @@
   width: 420px;
   height: 60px;
   background-color: #424B63;
-  border-bottom: 1px solid #72788A;
+  border-bottom: 2px solid #72788A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,10 +187,12 @@
   letter-spacing: 2px;
   margin-right: 19.6px;
   padding-left: 1px;
+  padding-top: 1px;
 
   &:hover {
     background-color: #D66926;
     border: 2px solid white;
+    padding-top: 0;
   }
 
   @include lg-min {
@@ -203,11 +215,12 @@
   }
 
   @include sm {
-    padding: 0 0 0 2px;
+    padding: 1px 0 0 2px;
     margin: 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    letter-spacing: 1.8px;
   }
 }
 
@@ -229,15 +242,15 @@
     background-color: #38405A;
     border: none;
     border-bottom: 2px solid #4C546B;
-    letter-spacing: 1.9px;
+    letter-spacing: 1.8px;
     color: white;
-    padding-left: 24px;
+    padding-left: 25px;
     padding-top: 3px;
-    margin-right: 19px;
+    margin-right: 20px;
 
     &::placeholder {
       padding-left: 17px;
-      color: white;
+      color: #9DA1AE;
       font-size: 18px;
       position: relative;
       right: 22px;
@@ -264,7 +277,7 @@
     letter-spacing: 1.8px;
     position: relative;
     left: 1px;
-    padding: 1px 12px 0 14px;
+    padding: 1px 12px 0 12px;
 
     &:hover {
       background-color: #D66926;

@@ -35,23 +35,35 @@
     }
   }
 
+  &__icons {
+    position: relative;
+    bottom: 5px;
+    right: 1px;
+    left: 0;
+  }
+
   &__divider {
-    margin: 29px auto 29px;
+    margin: 20px auto 30px;
     width: 76px;
     height: 2px;
     border: none;
     background-color: #424B63;
+    position: relative;
+    right: 1px;
 
     @include lg-md {
-      margin-bottom: 30px;
+      margin: 21px auto 30px;
+      left: 1px;
     }
 
     @include md-sm {
-      margin-bottom: 30px;
+      margin: 21px auto 30px;
+      left: 1px;
     }
 
     @include sm {
-      margin-bottom: 30px;
+      margin: 21px auto 30px;
+      left: 1px;
     }
   }
 
@@ -77,6 +89,10 @@
     @include md-sm {
       margin-left: 6px;
     }
+
+    @include sm {
+      margin-left: 6px;
+    }
   }
 
   &__text-2 {
@@ -89,6 +105,10 @@
 
     @include md-sm {
       margin-left: 1px;
+    }
+
+    @include sm {
+      margin-left: 2px;
     }
   }
 }
