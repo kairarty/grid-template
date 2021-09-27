@@ -8,18 +8,6 @@
   top: 0;
   z-index: 2;
 
-  @include lg-min {
-    padding-left: 18px;
-  }
-
-  @include md-sm {
-    height: 92px;
-  }
-
-  @include sm {
-    height: 92px;
-  }
-
   @include md {
     background-color: rgba($color-gray-dark, 0.25);
     @include box-shadow;
@@ -31,6 +19,10 @@
     grid-template-columns: auto 1fr;
     gap: $gap;
     @extend %container;
+
+    @include lg-sm {
+      padding-left: 20px;
+    }
   }
 }
 

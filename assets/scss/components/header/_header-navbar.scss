@@ -27,21 +27,19 @@
     }
 
     @include md-sm {
-      width: 24px;
+      width: 30px;
       height: 25px;
-      margin-right: 1px;
     }
 
     @include sm {
-      width: 24px;
-      height: 25px;
-      margin-right: 1px;
+      width: 30px;
+      margin-top: 19px;
     }
 
     &-row {
       display: block;
       position: absolute;
-      height: 2px;
+      height: 3px;
       width: 100%;
       background: $color-light;
       border-radius: 3px;
@@ -56,12 +54,12 @@
       }
 
       &:nth-child(2) {
-        top: 9px;
+        top: 10px;
         transform-origin: left center;
       }
 
       &:nth-child(3) {
-        top: 17px;
+        top: 19px;
         transform-origin: left center;
       }
     }
@@ -88,7 +86,10 @@
 
   &__list {
     @include lg-md {
-      letter-spacing: 1.8px;
+      letter-spacing: 1.6px;
+      position: relative;
+      top: 1px;
+      right: 4px;
     }
 
     @include md-min {
@@ -119,19 +120,14 @@
     &:nth-of-type(1) {
       @include lg-md {
         position: relative;
-        left: 3px;
+        right: 1px;
       }
     }
 
     &:nth-of-type(2) {
-      @include lg-min {
-        position: relative;
-        left: 1px;
-      }
-
       @include lg-md {
         position: relative;
-        left: 2px;
+        right: 1px;
       }
     }
 

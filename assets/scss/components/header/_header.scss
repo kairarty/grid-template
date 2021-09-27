@@ -11,24 +11,5 @@
   background-image: url(../img/img-header.png);
   background-size: cover;
   align-content: center;
-
-  @include lg-min {
-    padding-left: 20px;
-  }
-
-  @include lg-md {
-    background-position: 50% 50%;
-    min-height: 766px;
-  }
-
-  @include md-sm {
-    background-position: 50% 50%;
-    padding-top: 32px;
-    min-height: 560px;
-  }
-
-  @include sm {
-    background-position: 50% 50%;
-    min-height: 992px;
-  }
+  background-position: 50% 50%;
 }

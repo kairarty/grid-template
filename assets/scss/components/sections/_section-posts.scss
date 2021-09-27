@@ -2,55 +2,66 @@
 @use "../../presets" as *;
 
 .posts {
-  @include lg-min {
-    margin: 0 310px;
+  padding-bottom: 100px;
+
+  @include lg-md {
+    padding-bottom: 0;
+  }
+
+  @include md-sm {
+    padding-bottom: 0;
+  }
+
+  @include sm {
+    padding-bottom: 60px;
   }
 
   &__container {
+    max-width: 1340px;
+    padding: 0 20px;
+
     @include lg-min {
-      margin: 102px auto 0 auto;
+      margin: 101px auto 0 auto;
     }
 
     @include lg-md {
-      margin: 79px 20px 80px;
+      margin: 79px 0 80px;
     }
 
     @include md-sm {
-      margin: 58px 22px 60px;
+      margin: 58px 0 60px;
     }
   }
 
   &__title {
     color: #2d3651;
     font-size: 40px;
-    letter-spacing: 3.95px;
+    letter-spacing: 4px;
     font-weight: 700;
     text-align: left;
-    margin-bottom: 58px;
+    margin-bottom: 49px;
     font-family: "Roboto Slab", serif;
 
     @include lg-md {
-      margin-bottom: 43px;
+      margin-bottom: 41px;
       font-size: 32px;
-      letter-spacing: 3.3px;
+      letter-spacing: 3.2px;
       line-height: 40px;
     }
 
     @include md-sm {
       font-size: 24px;
-      letter-spacing: 2.2px;
+      letter-spacing: 2.4px;
       line-height: 32px;
-      margin-bottom: 28px;
+      margin-bottom: 34px;
     }
 
     @include sm {
       font-size: 24px;
-      letter-spacing: 2.3px;
+      letter-spacing: 2.4px;
       line-height: 32px;
       text-align: center;
-      margin: 57px 0 32px;
-      position: relative;
-      left: 1px;
+      margin: 58px 0 34px;
     }
   }
 
@@ -69,11 +80,11 @@
     @include md-sm {
       grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
       grid-template-columns: repeat(2, 1fr);
-      margin-bottom: 19px;
+      margin-bottom: 20px;
     }
 
     @include sm {
-      margin: 0 29px 20px 22px;
+      margin-bottom: 20px;
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
       grid-template-columns: repeat(1, 1fr);
     }
@@ -87,11 +98,15 @@
 
 .post-item {
   background-color: #eee;
-  min-height: 550px;
+  height: 538px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @include sm {
+    height: 482px;
+  }
 
   &__image {
     min-height: 300px;
@@ -115,182 +130,59 @@
     color: #637588;
     text-align: center;
     letter-spacing: 0;
-    line-height: 20px;
+    line-height: 18.4px;
     position: relative;
-    bottom: 27px;
     padding: 0 18px;
-    right: 2px;
   }
 
   &:nth-child(1) {
-    margin-right: -8px;
-
     @include lg-md {
-      margin-right: -1px;
+      height: 518px;
     }
 
-    @include md-sm {
-      margin: 0;
-    }
-  }
-
-  &:nth-child(2) {
-    margin: 0 -13px 0 8px;
-
-    @include lg-md {
-      margin: 0 -1px 0 1px;
-    }
-
-    @include md-sm {
-      margin: 0 -1px 0 0;
-    }
-
-    @include sm {
-      margin: 0 -8px 0 0;
-    }
-  }
-
-  &:nth-child(3) {
-    margin: 0 -17px 0 13px;
-
-    @include lg-md {
-      margin: 0;
-    }
-
-    @include md-sm {
-      margin: 0;
-    }
-
-    @include sm {
-      margin: 0 -8px 0 0;
-    }
-  }
-
-  &:nth-child(4) {
-    margin-right: -4px;
-
-    @include lg-md {
-      margin: 0 -1px 0 0;
-    }
-
-    @include md-sm {
-      margin: 0 -1px 0 0;
-    }
-
-    @include sm {
-      margin-right: -8px;
-    }
-  }
-
-  &:nth-child(5) {
-    margin: 0 -8px 0 4px;
-
-    @include lg-md {
-      margin: 0 -1px 0 0;
-    }
-
-    @include md-sm {
-      margin: 0;
-    }
-
-    @include sm {
-      margin: 0 -8px 0 0;
-    }
-  }
-
-  &:nth-child(6) {
-    margin: 0 -17px 0 8px;
-
-    @include lg-md {
-      margin: 0 -1px 0 1px;
-    }
-
-    @include md-sm {
-      margin: 0 -1px 0 0;
-    }
-
-    @include sm {
-      margin: 0 -8px 0 0;
-    }
-  }
-
-  &:nth-child(1) {
     .post-item {
-      &__title {
-        top: 2px;
-        left: 1px;
-
-        @include lg-min {
-          letter-spacing: 0.91px;
-        }
-
-        @include lg-md {
-          letter-spacing: 0.91px;
-          left: 0.5px;
-        }
-
-        @include md-sm {
-          letter-spacing: 0.95px;
-          left: 3px;
-        }
-
-        @include sm {
-          top: 5px;
-          left: 1px;
-          display: flex;
-        }
-      }
-
       &__text {
-        bottom: 60px;
+        bottom: 57px;
         left: 0;
-        padding: 0 28px;
+        padding: 0 20px;
+        line-height: 18.4px;
+
+        @include lg-md {
+          bottom: 47px;
+        }
 
         @include md-sm {
-          bottom: 60px;
+          bottom: 20px;
         }
 
         @include sm {
-
+          bottom: 20px;
         }
       }
     }
   }
 
   &:nth-child(2) {
+    @include lg-md {
+      height: 518px;
+    }
+
     .post-item {
-      &__title {
-        bottom: 2px;
-
-        @include lg-md {
-          top: 9px
-        }
-
-        @include md-sm {
-          top: 9px;
-        }
-
-        @include sm {
-          top: 9px;
-        }
-      }
-
       &__text {
-        bottom: 49px;
+        bottom: 30px;
 
         @include lg-md {
-          bottom: 38px;
+          bottom: 20px;
         }
 
         @include md-sm {
-          bottom: 38px;
-          padding: 0 34px;
+          bottom: 39px;
+          padding: 0 20px;
         }
 
         @include sm {
-          padding: 0 130px;
-          bottom: 38px;
-          left: 0.5px;
+          bottom: 20px;
+          padding: 0 20px;
         }
       }
     }
@@ -299,27 +191,22 @@
   &:nth-child(3) {
     .post-item {
       &__title {
-        top: 8px;
-
         @include md-sm {
           padding: 0 34px;
-        }
-
-        @include sm {
-          letter-spacing: 0.85px;
-          top: -2px;
         }
       }
 
       &__text {
+        padding: 0 20px;
+        top: -20px;
+
         @include md-sm {
-          padding: 0 40px;
+          padding: 0 30px;
         }
 
         @include sm {
-          padding: 0 130px;
+          padding: 0 20px;
           bottom: 27px;
-          left: -0.5px;
         }
       }
     }
@@ -327,50 +214,21 @@
 
   &:nth-child(4) {
     .post-item {
-      &__title {
-        bottom: 2px;
-
-        @include lg-min {
-          letter-spacing: 1.05px;
-          margin-left: 1px;
-        }
-
-        @include lg-md {
-          top: 9px;
-          left: 1px;
-        }
-
-        @include md-sm {
-          top: 9px;
-          letter-spacing: 1.02px;
-          left: 1px;
-        }
-
-        @include sm {
-          letter-spacing: 1px;
-          bottom: 7px;
-          left: 1px;
-        }
-      }
-
       &__text {
-        bottom: 49px;
+        bottom: 30px;
 
         @include lg-md {
-          bottom: 58px;
+          bottom: 48px;
         }
 
         @include md-sm {
-          bottom: 49px;
-          left: 0;
-          padding: 0 40px;
+          bottom: 39px;
+          padding: 0 20px;
         }
 
         @include sm {
-          padding: 0;
-          bottom: 65px;
-          right: 0;
-          margin: 0 30px;
+          padding: 0 20px;
+          bottom: 20px;
         }
       }
     }
@@ -379,47 +237,28 @@
   &:nth-child(5) {
     .post-item {
       &__title {
-        top: 8px;
         padding: 0 12px;
 
-        @include lg-min {
-          letter-spacing: 0.95px;
-          margin-left: 1px;
-        }
-
-        @include lg-md {
-          letter-spacing: 1px;
-          top: 9px;
-          left: 1px;
-        }
-
         @include md-sm {
-          top: -10px;
-          left: 1px;
-          letter-spacing: 0.97px;
-        }
-
-        @include sm {
-          letter-spacing: 0.96px;
-          left: 0.5px;
-          top: -1px;
+          padding: 0 20px;
         }
       }
 
       &__text {
+        bottom: 20px;
+        padding: 0 20px;
+
         @include lg-md {
-          bottom: 59px;
+          bottom: 48px;
         }
 
         @include md-sm {
-          padding: 0 40px;
-          bottom: 79px;
-          left: -1px;
+          padding: 0 30px;
+          bottom: 20px;
         }
 
         @include sm {
-          bottom: 70px;
-          right: 0;
+          bottom: 20px;
         }
       }
     }
@@ -428,47 +267,28 @@
   &:nth-child(6) {
     .post-item {
       &__title {
-        top: 6px;
-        left: 1px;
-        letter-spacing: 1.05px;
-
-        @include lg-md {
-          left: 0;
-        }
-
         @include md-sm {
-          top: -10px;
-          left: 0;
-        }
-
-        @include sm {
-          letter-spacing: 1.07px;
-          left: 0;
-          top: -10px;
+          padding: 0 20px;
         }
       }
 
       &__text {
-        bottom: 66px;
-        padding: 0 36px;
-        right: 1px;
+        bottom: 57px;
+        padding: 0 30px;
 
         @include lg-md {
-          bottom: 36px;
-          right: 2.5px;
+          bottom: 20px;
           padding: 0 26px;
         }
 
         @include md-sm {
-          bottom: 52px;
-          right: 2px;
-          margin: 0 20px;
+          bottom: 20px;
+          padding: 0 20px;
         }
 
         @include sm {
-          bottom: 52px;
-          margin: 0 96px;
-          right: 0.5px;
+          bottom: 20px;
+          padding: 0 20px;
         }
       }
     }
@@ -490,7 +310,6 @@
   font-size: 18px;
   letter-spacing: 1.8px;
   border: 2px solid #2d3651;
-  margin-left: 16px;
 
   &:hover {
     background-color: #d66926;
@@ -500,7 +319,6 @@
   &__title {
     position: relative;
     bottom: 2px;
-    left: 2px;
 
     @include sm {
       left: 1px;
@@ -518,12 +336,6 @@
 
   @include sm {
     width: 100%;
-    margin: 0 22px;
-  }
-}
-
-.hide-sm-plus {
-  @include sm-min {
-    display: none;
+    padding-right: 2px;
   }
 }

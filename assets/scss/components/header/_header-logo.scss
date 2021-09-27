@@ -10,45 +10,33 @@
     padding: $gap $gap $gap 0;
 
     @include md-sm {
-      margin-left: -1px;
-      letter-spacing: 5.4px;
-    }
-
-    @include sm {
-      margin-left: -1px;
+      letter-spacing: 5.28px;
     }
   }
 
   &__accent {
     display: inline-block;
     margin-right: 6px;
-    margin-left: 1px;
     padding: 12px 0 15px 4px;
     border: 3px solid $color-highlight;
 
     @include lg-min {
-      padding-top: 13px;
-      padding-bottom: 14px;
-    }
-
-    @include lg-min {
-      padding-right: 1px;
+      padding: 14px 1px 13px 5px;
     }
 
     @include lg-md {
-      margin: 0 7px 0 0;
+      margin: 0 4px 0 0;
+      padding: 14px 1px 13px 5px;
     }
 
     @include md-sm {
-      padding-top: 13px;
-      padding-left: 4px;
-      padding-bottom: 14px;
+      margin-right: 4px;
+      padding: 14px 1px 13px 5px;
     }
 
     @include sm {
-      padding-top: 13px;
-      padding-left: 4px;
-      padding-bottom: 14px;
+      padding: 14px 1px 13px 5px;
+      margin-right: 3px;
     }
   }
 }

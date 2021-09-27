@@ -4,37 +4,42 @@
 .about {
   background-color: #e5e5e5;
   height: auto;
-  padding-bottom: 63px;
+  padding-bottom: 84px;
 
   @include lg-md {
-    padding-bottom: 23px;
+    padding-bottom: 66px;
   }
 
-  @include md {
-    padding-bottom: 0;
+  @include md-sm {
+    padding-bottom: 48px;
   }
 
   @include sm {
-    padding-bottom: 68px;
+    padding-bottom: 59px;
   }
 
   &__container {
     margin: 0 auto;
-    max-width: 936px + 50.5px + 42.5px + 271px;
+    max-width: 930px + 50.5px + 42.5px + 271px;
+
+    @include ul {
+      margin: 0 0 0 23px;
+    }
 
     @include lg-md {
-      margin-left: 20px;
+      margin-left: 23px;
       max-width: 630px + 24.5px + 41.5px + 255px;
     }
 
     @include md-sm {
-      margin-left: 22px;
-      max-width: 414px + 18.5px + 55.5px + 236px;
+      margin: 0;
+      padding: 0 23px;
+      max-width: 1340px;
     }
 
     @include sm {
-      margin-left: 23px;
-      max-width: 532px;
+      margin: 0;
+      padding: 0 18px 0 23px;
     }
   }
 
@@ -43,27 +48,28 @@
     padding-top: 100px;
     gap: 42.5px;
 
-    @include lg-min {
-      position: relative;
-      left: 9px;
-    }
-
     @include lg-md {
       padding-top: 80px;
-      gap: 41.5px;
+      gap: 36px;
     }
 
     @include md-sm {
-      padding-top: 61px;
-      gap: 55.5px;
-      height: 479px;
+      padding-top: 60px;
+      gap: 20px;
+      margin: 0 auto;
     }
 
     @include sm {
-      padding-top: 59px;
+      padding-top: 60px;
       flex-direction: column;
-      gap: 39px;
+      gap: 6px;
+      align-items: center;
     }
+  }
+
+  &__content-flex {
+    position: relative;
+    right: 3px;
   }
 
   &__content-text {
@@ -71,75 +77,113 @@
     gap: 50.5px;
 
     @include lg-md {
-      gap: 24.5px;
+      gap: 10px;
     }
 
     @include md-sm {
-      gap: 18.5px;
+      gap: 0;
+    }
+  }
+
+  &__text-container {
+    padding-right: 10px;
+
+    @include lg-md {
+      padding: 0;
+    }
+
+    @include md-sm {
+      padding: 0;
     }
 
     @include sm {
-      position: relative;
-      right: 1px;
+      padding: 0;
     }
   }
 
   &__title {
-    margin: 0 0 47px;
+    margin: 0 0 41px;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 4px;
+    color: #2d3651;
+    font-weight: 700;
+    font-family: "Roboto Slab", serif;
 
     @include lg-md {
-      margin: 1px 0 38px;
+      margin-bottom: 35px;
+      font-size: 32px;
+      letter-spacing: 3.2px;
+      line-height: 38.4px;
     }
 
     @include md-sm {
+      font-size: 24px;
+      letter-spacing: 2.4px;
+      line-height: 28.8px;
       margin-bottom: 27px;
     }
 
     @include sm {
-      margin-bottom: 21px;
+      font-size: 24px;
+      letter-spacing: 2.4px;
+      line-height: 28.8px;
+      margin-bottom: 29px;
+      text-align: center;
+      margin-left: 1px;
     }
   }
 
   &__text {
     font-size: 18px;
-    letter-spacing: 0.9px;
-    line-height: 24px;
+    letter-spacing: 0.88px;
+    line-height: 20.7px;
     color: #637588;
-    margin: 0 0 16px;
+    margin: 0 0 18px;
     position: relative;
     top: 2px;
 
+    @include lg-md {
+      font-size: 16px;
+      line-height: 18.4px;
+      margin-bottom: 16px;
+    }
+
     @include md-sm {
       font-size: 16px;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.88px;
       top: 4px;
+      line-height: 18.4px;
+      margin-bottom: 16px;
     }
 
     @include sm {
       font-size: 16px;
-      letter-spacing: 0.8px;
-      top: 10px;
+      letter-spacing: 0.88px;
+      line-height: 18.4px;
+      margin-bottom: 16px;
     }
   }
 
   &__divider {
     border: none;
-    border-left: 1px solid rgba(#707070, 0.27);
+    border-left: 2px solid #D8DADC;
     height: 200px;
     width: 1px;
     position: relative;
+    bottom: 6px;
 
     @include lg-min {
-      bottom: 6px;
+      right: 6px;
     }
 
     @include lg-md {
-      left: 1px;
-      bottom: 14px;
+      left: 12px;
     }
 
     @include md-sm {
-      left: 1px;
+      bottom: 4px;
+      left: 16px;
     }
 
     @include sm {
@@ -148,120 +192,34 @@
   }
 
   &__image {
-    margin-top: 2px;
-    width: 271px;
-    height: 487px;
+    margin-top: 5px;
+
+    @include lg-min {
+      height: 480px;
+      position: relative;
+      left: 1px;
+    }
 
     @include lg-md {
-      width: 255px;
-      height: 459px;
-      margin-top: 1px;
+      height: 480px;
+      margin-top: 10px;
+      position: relative;
+      right: 5px;
     }
 
     @include md-sm {
       position: relative;
-      top: -27px;
+      left: 3px;
+      margin-top: 70px;
       width: 236px;
       height: 425px;
     }
 
     @include sm {
-      margin: 1px 0 0 142px;
+      margin-top: 0;
+      margin-right: 5px;
+      width: 267px;
     }
-  }
-}
-
-.title-1,
-.title-2 {
-  text-align: left;
-  font-size: 42px;
-  color: #2d3651;
-  font-weight: 700;
-  margin: 0;
-  font-family: "Roboto Slab", serif;
-
-  @include lg-min {
-    position: relative;
-    bottom: 1px;
-  }
-
-  @include lg-md {
-    font-size: 32px;
-  }
-
-  @include md-sm {
-    font-size: 24px;
-  }
-
-  @include sm {
-    font-size: 24px;
-    text-align: center;
-  }
-}
-
-.title-1 {
-  letter-spacing: 2.6px;
-
-  @include lg-min {
-    right: 1px;
-  }
-
-  @include lg-md {
-    letter-spacing: 2.7px;
-  }
-
-  @include md-sm {
-    letter-spacing: 2px;
-  }
-
-  @include sm {
-    letter-spacing: 2px;
-    margin-top: 1px;
-  }
-}
-
-.title-2 {
-  letter-spacing: 3.3px;
-
-  @include lg-md {
-    position: relative;
-    top: 4px;
-    letter-spacing: 3.4px;
-  }
-
-  @include md-sm {
-    position: relative;
-    top: 5px;
-    letter-spacing: 2.4px;
-  }
-
-  @include sm {
-    position: relative;
-    top: 5px;
-    letter-spacing: 2.4px;
-  }
-}
-
-.hide-lg {
-  @include lg {
-    display: none;
-  }
-}
-
-.hide-md {
-  @include md {
-    display: none;
-  }
-
-  @include sm {
-    display: block;
-    margin-bottom: 6px;
-  }
-}
-
-.hide-sm {
-  @include sm {
-    display: none;
   }
 }
 

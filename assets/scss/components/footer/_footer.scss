@@ -2,67 +2,60 @@
 @use "../../presets" as *;
 
 .footer {
-  margin-top: 101px;
-
-  @include lg-md {
-    margin-top: 80px;
-  }
-
-  @include md {
-    margin-top: 60px;
-  }
-
   &__container {
-    height: 250px;
+    height: 252px;
     background-color: #2d3651;
 
     @include lg-min {
       padding-left: 18px;
-
     }
   }
 
   &__icons-container {
-    padding-top: 48px;
+    padding-top: 60px;
     color: white;
     font-size: 36px;
     display: flex;
-    gap: 16px;
+    gap: 18px;
     justify-content: center;
+    margin-right: 18px;
 
-    @include md {
-      padding-top: 58px;
+    @include lg-md {
+      margin: 0 0 0 2px;
+      gap: 18.5px;
+    }
+
+    @include md-sm {
+      gap: 18.5px;
+      margin-right: 0;
+      margin-left: 2px;
+    }
+
+    @include sm {
+      margin-right: 0;
+      margin-left: 2px;
+      gap: 18.5px;
     }
   }
 
-  &__icons {
-    position: relative;
-    bottom: 5px;
-    right: 1px;
-    left: 0;
-  }
-
   &__divider {
-    margin: 20px auto 30px;
-    width: 76px;
+    margin: 28px auto 19px;
+    width: 75px;
     height: 2px;
     border: none;
     background-color: #424B63;
     position: relative;
-    right: 1px;
+    right: 9px;
 
     @include lg-md {
-      margin: 21px auto 30px;
       left: 1px;
     }
 
     @include md-sm {
-      margin: 21px auto 30px;
       left: 1px;
     }
 
     @include sm {
-      margin: 21px auto 30px;
       left: 1px;
     }
   }
@@ -73,50 +66,44 @@
     font-size: 16px;
     line-height: 20px;
     color: white;
-    margin: 0;
+    margin: 0 14px -2px 0;
   }
 
   &__text-1 {
     font-weight: 100;
-    letter-spacing: 4.8px;
-    opacity: 0.3;
+    letter-spacing: 5.28px;
+    color: #637588;
     margin-left: 4px;
 
     @include lg-md {
-      margin-left: 5px;
+      margin-left: 22px;
     }
 
     @include md-sm {
-      margin-left: 6px;
+      margin-left: 22px;
     }
 
     @include sm {
-      margin-left: 6px;
+      margin-left: 22px;
     }
   }
 
   &__text-2 {
-    letter-spacing: 0.9px;
-    font-weight: 500;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    margin-right: 18px;
+    color: #e5e5e5;
 
     @include lg-md {
-      margin: 0 0 0 1px;
+      margin: 0;
     }
 
     @include md-sm {
-      margin-left: 1px;
+      margin: 0;
     }
 
     @include sm {
-      margin-left: 2px;
+      margin: 0;
     }
-  }
-}
-
-i {
-  &:nth-of-type(4),
-  &:nth-of-type(5) {
-    position: relative;
-    left: 2px;
   }
 }
