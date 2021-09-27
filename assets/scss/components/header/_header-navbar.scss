@@ -105,7 +105,7 @@
       text-align: right;
       @include unlist;
       @include box-shadow;
-      background-color: rgba($color-gray-dark, 0.5);
+      background-color: $color-gray-dark;
       position: absolute;
       top: 100%;
       right: $gap;

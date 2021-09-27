@@ -4,6 +4,7 @@
 .subscribe-form {
   height: 120px;
   background-color: #2d3651;
+  padding: 30px 0;
 
   @include md-sm {
     height: 200px;
@@ -14,24 +15,23 @@
   }
 
   &__container {
-    display: flex;
-    gap: 32px;
-    padding: 30px 20px;
+    @extend %container;
+    display: grid;
     max-width: 1340px;
+    padding: 0 20px;
     margin: 0 auto;
+    gap: $gap;
+
+    @include lg-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include lg-md {
-      gap: 28px;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include md-sm {
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    @include sm {
-      flex-direction: column;
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
@@ -91,6 +91,7 @@
     @include md-sm {
       width: 100%;
       padding-left: 42px;
+      grid-column: 1 / span 2;
 
       &:hover {
         padding-bottom: 3px;
@@ -131,15 +132,6 @@
       letter-spacing: 1.8px;
     }
 
-    @include lg-md {
-      position: relative;
-      max-width: 304px;
-    }
-
-    @include md-sm {
-      display: none;
-    }
-
     @include sm {
       width: 100%;
     }
@@ -164,7 +156,6 @@
 }
 
 .subscribe-btn {
-  width: 100%;
   height: 60px;
   background-color: #424B63;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
@@ -187,10 +178,6 @@
     margin-right: 0;
   }
 
-  @include md-sm {
-    display: none;
-  }
-
   @include sm {
     padding-top: 2px;
     margin: 0;
@@ -198,74 +185,5 @@
     display: flex;
     justify-content: center;
     letter-spacing: 1.8px;
-  }
-}
-
-.subscribe-md-sm {
-  display: flex;
-  width: 100%;
-  position: relative;
-  top: 2px;
-  gap: 10px;
-
-  @include md-min {
-    display: none;
-  }
-
-  @include sm {
-    display: none;
-  }
-
-  &__email {
-    width: 100%;
-    height: 60px;
-    background-color: #38405A;
-    border: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
-    letter-spacing: 1.8px;
-    color: white;
-    padding-top: 4px;
-
-    &::placeholder {
-      padding-left: 52px;
-      color: #637596;
-      font-size: 18px;
-      position: relative;
-      right: 22px;
-      letter-spacing: 2.7px;
-    }
-
-    &:hover {
-      background-color: #4C546B;
-      border-bottom: 2px solid white;
-      border-top: 2px solid #5E657A;
-      border-left: 2px solid #5E657A;
-      border-right: 2px solid #5E657A;
-      padding-bottom: 3px;
-    }
-
-    &:focus {
-      border: none;
-      transition: 0.75s;
-    }
-  }
-
-  &__btn {
-    width: 100%;
-    height: 60px;
-    background-color: #424B63;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    letter-spacing: 1.8px;
-    padding: 1px 12px 0 12px;
-    margin-left: 16px;
-
-    &:hover {
-      background-color: #D66926;
-      border: 2px solid white;
-    }
   }
 }
